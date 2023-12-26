@@ -1,0 +1,55 @@
+CREATE DATABASE diamondshopassistant;
+USE diamondshopassistant;
+
+CREATE TABLE customers (
+    phone_number CHAR(9),
+    mail VARCHAR(255),
+    age SMALLINT,
+    purpose ENUM('investment', 'gift', 'personal purchase', 'collector\'s purchase', 'occasional purchase', 'other'),
+    sex ENUM('M', 'F'),
+    age_group SMALLINT,
+    item ENUM('rings', 'necklaces', 'bracelets', 'earrings', 'watches', 'collector\'s item ', 'decorations'),
+    id SMALLINT PRIMARY KEY AUTO_INCREMENT
+);
+
+CREATE TABLE orders (
+    carat DECIMAL(5 , 2 ),
+    cut ENUM('Fair', 'Good', 'Very Good', 'Premium', 'Ideal'),
+    color ENUM('J', 'I', 'D', 'H', 'F', 'E', 'G'),
+    clarity ENUM('I1', 'SI2', 'SI1', 'VS2', 'VS1', 'VVS2', 'VVS1', 'IF'),
+    table_ SMALLINT,
+    x DECIMAL(5 , 2 ),
+    y DECIMAL(5 , 2 ),
+    z DECIMAL(5 , 2 ),
+    depth DECIMAL(5 , 2 ),
+    price DECIMAL(10 , 2 ),
+    customer_id SMALLINT,
+    year_ SMALLINT,
+    id SMALLINT PRIMARY KEY AUTO_INCREMENT
+);
+
+DELIMITER $
+CREATE TRIGGER assign_age_group BEFORE INSERT ON customers
+FOR EACH ROW
+BEGIN 
+    IF NEW.age < 18 THEN
+        SET NEW.age_group = 1;
+    ELSEIF NEW.age BETWEEN 18 AND 30 THEN
+        SET NEW.age_group = 2;
+    ELSEIF NEW.age BETWEEN 31 AND 50 THEN
+        SET NEW.age_group = 3;
+    ELSE
+        SET NEW.age_group = 4;
+    END IF;
+END;
+$
+DELIMITER ;
+
+DELIMITER $
+CREATE TRIGGER calculate_depth BEFORE INSERT ON orders
+FOR EACH ROW
+BEGIN 
+    SET NEW.depth = NEW.z * 2 / (NEW.y + NEW.x);
+END;
+$
+DELIMITER ;
