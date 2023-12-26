@@ -22,27 +22,27 @@ App demo:
 - Make prediction:
 
   
-![](https://github.com/tompaw4727/test/blob/main/D1.gif) 
+![](https://github.com/tompaw4727/DiamondShopAssistant/blob/main/readme_files/D1.gif) 
 - Database:
 
   
-![](https://github.com/tompaw4727/test/blob/main/D2.gif)
+![](https://github.com/tompaw4727/DiamondShopAssistant/blob/main/readme_files/D2.gif)
 - Database manipulation examples:
 
 
-![](https://github.com/tompaw4727/test/blob/main/D3.gif)
-![](https://github.com/tompaw4727/test/blob/main/D4.gif)
+![](https://github.com/tompaw4727/DiamondShopAssistant/blob/main/readme_files/D3.gif)
+![](https://github.com/tompaw4727/DiamondShopAssistant/blob/main/readme_files/D4.gif)
 - User errors handling examples:
 
 
-![](https://github.com/tompaw4727/test/blob/main/DV1.gif)
-![](https://github.com/tompaw4727/test/blob/main/DV2.gif)
-![](https://github.com/tompaw4727/test/blob/main/DV3.gif)
+![](https://github.com/tompaw4727/DiamondShopAssistant/blob/main/readme_files/DV1.gif)
+![](https://github.com/tompaw4727/DiamondShopAssistant/blob/main/readme_files/DV2.gif)
+![](https://github.com/tompaw4727/DiamondShopAssistant/blob/main/readme_files/DV3.gif)
 - Sample charts:
 
 
-![](https://github.com/tompaw4727/test/blob/main/W1.png)
-![](https://github.com/tompaw4727/test/blob/main/W2.png)
-![](https://github.com/tompaw4727/test/blob/main/W3.png)
+![](https://github.com/tompaw4727/DiamondShopAssistant/blob/main/readme_files/P1.png)
+![](https://github.com/tompaw4727/DiamondShopAssistant/blob/main/readme_files/P2.png)
+![](https://github.com/tompaw4727/DiamondShopAssistant/blob/main/readme_files/P3.png)
 ## License
 Distributed under the MIT License.
